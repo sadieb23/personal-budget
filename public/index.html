@@ -248,14 +248,14 @@
     
     change(randomData());
     
-   // d3.select(".randomize")
-    //    .on("click", function(){
-    //        change(randomData());
-      //  });
+    d3.select(".randomize")
+      .on("click", function(){
+         change(randomData());
+       });
     
     // Load data from the JSON file
-    d3.json("budget-data.json").then(function (data) {
-            change(data.myBudget);
+    d3.json("/data/budget-data.json").then(function (data) {
+            change(data);
         });
 
     function change(data) {
